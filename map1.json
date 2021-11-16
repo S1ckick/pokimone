@@ -1,0 +1,169 @@
+{
+  "compressionlevel": -1,
+  "height": 15,
+  "infinite": false,
+  "layers": [
+    {
+      "data": [
+        11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12,
+        12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11, 11, 12, 12, 12, 12, 12,
+        12, 12, 12, 12, 11, 11, 12, 12, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12,
+        12, 11, 11, 12, 12, 11, 11, 12, 12, 12, 12, 11, 12, 12, 12, 12, 12, 12,
+        12, 12, 11, 11, 12, 12, 12, 12, 11, 12, 12, 12, 12, 12, 12, 12, 12, 11,
+        11, 12, 12, 12, 12, 11, 12, 11, 11, 12, 12, 11, 12, 12, 11, 11, 12, 12,
+        12, 12, 11, 12, 12, 12, 12, 12, 11, 12, 12, 11, 11, 12, 12, 12, 12, 12,
+        12, 12, 12, 12, 12, 11, 12, 12, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12,
+        12, 12, 11, 12, 12, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 11,
+        12, 12, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11,
+        11, 12, 12, 12, 11, 12, 12, 11, 12, 12, 12, 12, 11, 12, 11, 11, 12, 12,
+        12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 11, 11, 11, 11, 11, 11, 11,
+        11, 11, 11, 11, 11, 11, 11, 11, 11
+      ],
+      "height": 15,
+      "id": 1,
+      "name": "Borders",
+      "opacity": 1,
+      "type": "tilelayer",
+      "visible": true,
+      "width": 15,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 5,
+      "name": "objs",
+      "objects": [
+        {
+          "gid": 9,
+          "height": 60,
+          "id": 11,
+          "name": "Enemy1",
+          "rotation": 0,
+          "type": "Enemy",
+          "visible": true,
+          "width": 50,
+          "x": 164.23076923077,
+          "y": 466.538461538461,
+          "props": [
+            {
+              "name": "move_x",
+              "value": 1
+            },
+            {
+              "name": "move_y",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "gid": 9,
+          "height": 60,
+          "id": 12,
+          "name": "Enemy2",
+          "rotation": 0,
+          "type": "Enemy",
+          "visible": true,
+          "width": 50,
+          "x": 487.307692307692,
+          "y": 221.923076923077,
+          "props": [
+            {
+              "name": "move_x",
+              "value": 0
+            },
+            {
+              "name": "move_y",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "gid": 10,
+          "height": 50,
+          "id": 18,
+          "name": "Player",
+          "rotation": 90,
+          "type": "Player",
+          "visible": true,
+          "width": 50,
+          "x": 128.846153846154,
+          "y": 120
+        },
+        {
+          "height": 37,
+          "id": 20,
+          "name": "Candle1",
+          "rotation": 0,
+          "type": "Candle",
+          "visible": true,
+          "width": 20,
+          "x": 100,
+          "y": 300
+        },
+        {
+          "height": 35,
+          "id": 21,
+          "name": "Health1",
+          "rotation": 0,
+          "type": "Health",
+          "visible": true,
+          "width": 40,
+          "x": 500,
+          "y": 500
+        }
+      ],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "nextlayerid": 6,
+  "nextobjectid": 19,
+  "orientation": "orthogonal",
+  "renderorder": "right-down",
+  "tiledversion": "1.7.2",
+  "tileheight": 64,
+  "tilesets": [
+    {
+      "firstgid": 11,
+      "columns": 1,
+      "image": "sand.jpg",
+      "imageheight": 80,
+      "imagewidth": 80,
+      "margin": 0,
+      "name": "sand",
+      "spacing": 0,
+      "tilecount": 1,
+      "tiledversion": "1.7.2",
+      "tileheight": 64,
+      "tilewidth": 64,
+      "transparentcolor": "#f7f1f6",
+      "type": "tileset",
+      "version": "1.6"
+    },
+    {
+      "firstgid": 12,
+      "columns": 1,
+      "image": "water.jpg",
+      "imageheight": 80,
+      "imagewidth": 80,
+      "margin": 0,
+      "name": "water",
+      "spacing": 0,
+      "tilecount": 1,
+      "tiledversion": "1.7.2",
+      "tileheight": 64,
+      "tilewidth": 64,
+      "transparentcolor": "#f7f1f6",
+      "type": "tileset",
+      "version": "1.6"
+    }
+  ],
+  "tilewidth": 64,
+  "type": "map",
+  "version": "1.6",
+  "width": 15
+}

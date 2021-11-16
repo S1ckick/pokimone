@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Game</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="overlay">
+      <div id="popup">
+        <div id="table_body">
+          <h1>Table of records</h1>
+          <table id="Table" border="1">
+            <tr>
+              <td>#</td>
+              <td>Level</td>
+              <td>Kills</td>
+              <td>Result</td>
+            </tr>
+          </table>
+        </div>
+        <div id="footer">
+          <button id="another" onClick="another()">Another level</button>
+          <button id="again" onClick="again()">Again</button>
+        </div>
+      </div>
+    </div>
+    <div id="header">
+      <h1>THE GAME</h1>
+    </div>
+    <div id="wrapper">
+      <div id="game">
+        <canvas
+          id="canvas"
+          width="700"
+          height="700"
+          style="border: 1px solid black"
+        ></canvas>
+      </div>
+      <div id="stats">
+        <h1>Health</h1>
+        <span id="health"></span>
+        <h1>Kills</h1>
+        <span id="kills"></span>
+        <h1>Attack Power</h1>
+        <span id="attack"></span>
+      </div>
+    </div>
+
+    <script src="managers/statsManager.js"></script>
+    <script src="managers/mapManager.js"></script>
+    <script src="managers/spriteManager.js"></script>
+    <script src="managers/eventsManager.js"></script>
+    <script src="managers/physicManager.js"></script>
+    <script src="managers/soundManager.js"></script>
+    <script src="managers/gameManager.js"></script>
+    <script src="entity.js"></script>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      soundManager.init();
+      soundManager.loadArray(["theme.mp3"]);
+      soundManager.play("theme.mp3", { looping: true });
+      gameManager.loadAll(ctx);
+      gameManager.play(ctx);
+    </script>
+  </body>
+</html>

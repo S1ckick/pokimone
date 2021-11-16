@@ -1,0 +1,15 @@
+{
+  "columns": 2,
+  "image": "sand.jpg",
+  "imageheight": 80,
+  "imagewidth": 80,
+  "margin": 0,
+  "name": "border",
+  "spacing": 0,
+  "tilecount": 4,
+  "tiledversion": "1.7.2",
+  "tileheight": 32,
+  "tilewidth": 32,
+  "type": "tileset",
+  "version": "1.6"
+}
