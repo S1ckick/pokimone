@@ -20,7 +20,7 @@ var Entity = {
 
 //Класс игрока
 var Player = Entity.extend({
-  lifetime: 50,
+  lifetime: 600,
   move_x: 0,
   move_y: 1,
   speed: 3,
@@ -79,7 +79,6 @@ var Player = Entity.extend({
   //Функция смерти
   kill: function () {
     gameManager.laterKill.push(this);
-    //statisticsManager.finish(false);
   },
   //Функция атаки
   fire: function () {
@@ -198,7 +197,6 @@ var Enemy = Entity.extend({
   //Функция смерти
   kill: function () {
     gameManager.laterKill.push(this);
-    //statisticsManager.incKills();
   },
   //Функция атаки
   fire: function () {
@@ -281,7 +279,7 @@ var Fireball = Entity.extend({
     if (typeof obj.damage === "function") obj.damage(this.damage);
   },
   //Соприкосновение с картой
-  onTouchMap: function (idx) {
+  onTouchMap: function () {
     this.kill();
   },
   //угасание файерболла

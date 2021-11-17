@@ -8,7 +8,7 @@ var gameManager = {
   player: null, //указатель на объект игрока
   laterKill: [], //отложенное уничтожение объекта
   drawInterval: 20, //
-  intervalId: null,
+  mainInterval: null,
 
   //инициализация игрока
   initPlayer: function (obj) {
@@ -124,7 +124,7 @@ var gameManager = {
   //играть
   play: function (ctx) {
     gameManager.stop();
-    gameManager.intervalId = setInterval(
+    gameManager.mainInterval = setInterval(
       () => updateWorld(ctx),
       gameManager.drawInterval
     );
@@ -132,17 +132,14 @@ var gameManager = {
 
   //заканчивать играть
   stop: function () {
-    if (gameManager.intervalId) {
-      clearInterval(gameManager.intervalId);
-      gameManager.intervalId = null;
+    if (gameManager.mainInterval) {
+      clearInterval(gameManager.mainInterval);
+      gameManager.mainInterval = null;
     }
     if (stats.result !== null) {
-      stats.result = null;
-      stats.kills = 0;
-      stats.counter++;
-      stats.level ^= 1;
-      gameManager.loadAll(ctx);
-      gameManager.play(ctx);
+      document.getElementById("overlay").style.display = "block";
+      addRow(stats.counter, stats.kills, stats.result, stats.level);
+      console.log(stats);
     }
   },
 };
